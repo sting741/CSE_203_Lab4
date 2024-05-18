@@ -57,7 +57,9 @@ public class WordsList {
             temp = dictionMap.get(temp);
             System.out.println(temp);
         } else {
-            System.out.println("Cannot find the word in the dictionary");
+            System.out.println("Cannot find that word in the dictionary");
         }
     }
+    
+    
 }
