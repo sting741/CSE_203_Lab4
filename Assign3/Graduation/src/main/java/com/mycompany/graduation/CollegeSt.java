@@ -4,10 +4,43 @@
  */
 package com.mycompany.graduation;
 
+import java.util.Scanner;
+
 /**
  *
  * @author phuon
  */
-public class CollegeSt {
+public class CollegeSt extends Student {
+
+    protected double graExScore;
+
+    public CollegeSt(double graExScore) {
+        super();
+        this.graExScore = graExScore;
+    }
+
+    public CollegeSt() {
+    }
+
+    @Override
+    public void Input() {
+        Scanner sc = new Scanner(System.in);
+        super.Input();
+        System.out.println("Input student graduation exam scores: ");
+        graExScore = sc.nextDouble();
+    }
+
+    @Override
+    public boolean RequireGraduate() {
+        if (graExScore < 5) {
+            return false;
+        }
+        return super.RequireGraduate();
+    }
     
+    @Override
+    public void Output(){
+        super.Output();
+        System.out.println("student graduation exam scores: " + graExScore);
+    }
 }
